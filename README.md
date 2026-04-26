@@ -1,6 +1,10 @@
 # 🤖 Project Z.O.E. (Zero-latency Operational Entity) 
 **你的專屬開源靈魂伴侶與雙核 AI 第二大腦**
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green.svg)](https://fastapi.tiangolo.com/)
+
 **Project Z.O.E.** 是一個專為桌面陪伴機械人（如 M5Stack StackChan）設計的「敏捷開發 (Agile Development)」AI 大腦架構。它拋棄了傳統 AI 助手「一問一答」的死板模式，透過 **Obsidian 第二大腦記憶庫**、**三層邊緣與雲端混合架構 (Hybrid Edge-Cloud)**、以及 **主動心跳機制**，賦予 AI 真正的「靈魂」與全天候陪伴能力。
 
 ---
