@@ -197,6 +197,8 @@ async def chat_completions(request: Request):
 
     # 🕹️ 三層模式切換攔截 (完全在本地處理)
     if "抖一抖先" in user_message or "回復普通模式" in user_message:
+    #if "Slow Down" in user_message or "Normal Mode" in user_message:
+    # upper line is chinese, remarked line is for english user
         AI_LEVEL = 1
         sys_reply = config.SYS_MESSAGES["layer1"]
         log_to_memory(user_message, sys_reply)
@@ -204,6 +206,8 @@ async def chat_completions(request: Request):
         return StreamingResponse(stream_system_msg(sys_reply), media_type="text/event-stream") if is_stream else get_system_json_response(sys_reply)
             
     if "打醒精神" in user_message:
+    #if "CheerUp" in user_message:
+    # upper line is chinese, remarked line is for english user
         AI_LEVEL = 2
         sys_reply = config.SYS_MESSAGES["layer2"]
         log_to_memory(user_message, sys_reply)
@@ -211,6 +215,8 @@ async def chat_completions(request: Request):
         return StreamingResponse(stream_system_msg(sys_reply), media_type="text/event-stream") if is_stream else get_system_json_response(sys_reply)
 
     if "超級模式" in user_message or "啟動超級大腦" in user_message:
+    #if "HyperMode" in user_message or "SuperCharge" in user_message:
+    # upper line is chinese, remarked line is for english user
         AI_LEVEL = 3
         sys_reply = config.SYS_MESSAGES["layer3"]
         log_to_memory(user_message, sys_reply)
